@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --Green-500: hsl(158, 36%, 37%);
+    --Green-700: hsl(158, 42%, 18%);
+    --Black: hsl(212, 21%, 14%);
+    --Grey: hsl(228, 12%, 48%);
+    --Cream: hsl(30, 38%, 92%);
+    --White: hsl(0, 0%, 100%);
+    --Blue: hsl(228, 45%, 44%);
+}
+
+body{
+    background-color: var(--Cream);
+}
+
+
+article>img{
+    width:100%;
+    border-radius: 10px 10px 0 0;
+}
+article{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color:  var(--White);
+    width:clamp(300px, 95%, 500px);
+    margin : 100px auto ;
+}
+
+section{
+    width:90%;
+    margin: auto auto;
+    padding-bottom: 20px;
+    padding-block-start:20px ;
+}
+hgroup p{
+    font-family:"Montserrat",sans-serif ;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    color:  var(--Grey);
+    font-weight: 500;
+    font-size: 0.7rem;
+}
+h1{
+    font-family:"Fraunces",serif;
+    width: 15ch;
+    line-height:1.9rem;
+}
+
+section>p{
+    font-family:"Montserrat",sans-serif ;
+    color:var(--Grey);
+    font-weight: 500;
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+}
+
+.price{
+    display: flex;
+    margin-block-end: 1rem;
+}
+.price>b{
+    font-family:"Fraunces",serif;
+    color: var(--Green-500);
+    font-size:2rem;
+}
+.price>p{
+    text-decoration:line-through;
+    font-family:"Montserrat",sans-serif ;
+    color:var(--Grey);
+    font-size:0.8rem;
+    margin-inline-start: 1.5rem;
+    margin-block-start:0.5rem;
+
+}
+
+button{
+    background-color: var(--Green-500);
+    color:var(--White);
+    font-family:"Montserrat",sans-serif ;
+    font-size: 1rem;
+    font-weight: 600;
+    width:100%;
+    border:none;
+    padding:15px;
+    border-radius:10px;
+}
+
+button:hover{
+    background-color: var(--Green-700);
+    cursor:pointer ;
+}
+button>img{
+    width:auto;
+    height: 100%;
+    margin-inline-end: 1rem;
+}
+
+footer{
+    margin-top: 50px;
+}
+
+.attribution { 
+    font-size: 1rem; 
+    text-align: center; 
+}
+.attribution a { 
+    color: var(--Blue) ; 
+}  
+
+
+@media screen and (min-width:620px){
+
+    main{
+        height:100vh;
+        align-content: center;
+    }
+    article{
+        margin-top: 0;
+        flex-direction: row;
+        width:clamp(560px, 90%, 500px);
+        height:412px;
+        background-color: var(--White);
+        
+    }
+
+    section{
+        padding-bottom: 0;
+        padding-block-start:0 ;
+        margin: 25px ;
+    }
+
+    hgroup p{
+        margin-top: 5px ;
+    }
+
+    h1{
+        width: 10ch;
+    }
+    
+
+    article>img{
+        content:url("../images/image-product-desktop.jpg");
+        border-radius: 10px 0 0 10px;
+    }
+
+}
